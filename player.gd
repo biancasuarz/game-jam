@@ -1,9 +1,7 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -700.0
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -31,3 +29,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 # Função que lida com o fim do jogo
 func game_over():
 	print("Game Over!")
+	get_tree().change_scene_to_file("res://game_over_scene.tscn")
