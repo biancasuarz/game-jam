@@ -16,7 +16,7 @@
 size = Vector2(1151, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cgtt"]
-size = Vector2(108, 165)
+size = Vector2(79, 254.125)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_02dhi"]
 radius = 29.0
@@ -52,7 +52,7 @@ texture = ExtResource("2_afla5")
 [node name="StaticBody2D" type="StaticBody2D" parent="gameplay/chao"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gameplay/chao/StaticBody2D"]
-position = Vector2(584.5, 604)
+position = Vector2(583, 600)
 shape = SubResource("RectangleShape2D_o0o3v")
 one_way_collision_margin = 0.0
 
@@ -60,12 +60,51 @@ one_way_collision_margin = 0.0
 script = ExtResource("3_snx51")
 
 [node name="Sprite2D" type="Sprite2D" parent="gameplay/Area2D"]
-position = Vector2(501, 433)
+position = Vector2(435, 431)
 scale = Vector2(0.351985, 0.355556)
 texture = ExtResource("6_hj6sl")
 
+[node name="Sprite2D2" type="Sprite2D" parent="gameplay/Area2D"]
+position = Vector2(818, 435)
+scale = Vector2(0.351985, 0.355556)
+texture = ExtResource("6_hj6sl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="gameplay/Area2D"]
+position = Vector2(651, 122)
+rotation = -3.13956
+scale = Vector2(0.351985, 0.355556)
+texture = ExtResource("6_hj6sl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="gameplay/Area2D"]
+position = Vector2(960, 139)
+rotation = -3.13956
+scale = Vector2(0.351985, 0.392193)
+texture = ExtResource("6_hj6sl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="gameplay/Area2D"]
+position = Vector2(1081, 424)
+rotation = -0.00866318
+scale = Vector2(0.351985, 0.392193)
+texture = ExtResource("6_hj6sl")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gameplay/Area2D"]
-position = Vector2(493, 479.5)
+position = Vector2(439, 447)
+shape = SubResource("RectangleShape2D_1cgtt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="gameplay/Area2D"]
+position = Vector2(658, 94)
+shape = SubResource("RectangleShape2D_1cgtt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="gameplay/Area2D"]
+position = Vector2(964, 147)
+shape = SubResource("RectangleShape2D_1cgtt")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="gameplay/Area2D"]
+position = Vector2(1086, 423.875)
+shape = SubResource("RectangleShape2D_1cgtt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="gameplay/Area2D"]
+position = Vector2(822, 451.063)
 shape = SubResource("RectangleShape2D_1cgtt")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
