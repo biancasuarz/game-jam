@@ -29,5 +29,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 # Função que lida com o fim do jogo
 func game_over():
+	$Sprite2D/pop.play()
+	var timer = get_node("Sprite2D/Timer")
+	timer.timeout.connect(_on_timer_timeout)
+
+func _on_timer_timeout():
 	print("Game Over!")
 	get_tree().change_scene_to_file("res://game_over_scene.tscn")

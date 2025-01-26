@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c876lqa0k464r"]
+
+[ext_resource type="Texture2D" uid="uid://wo10b8aodvs2" path="res://assets/background.png" id="1_aeje3"]
+[ext_resource type="Script" path="res://start_scene.gd" id="1_b73dv"]
+[ext_resource type="AudioStream" uid="uid://dvlaga5jqfw40" path="res://sounds/01_Musica_tema_Bubble.ogg" id="2_qg7iq"]
+[ext_resource type="Texture2D" uid="uid://cvh8t3sgr476" path="res://assets/Game Jam - BOTAO JOGAR.png" id="3_e1y2j"]
+
+[node name="ParallaxBackground3" type="ParallaxBackground"]
+script = ExtResource("1_b73dv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.25, 325.75)
+scale = Vector2(1.86715, 1.84758)
+texture = ExtResource("1_aeje3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qg7iq")
+autoplay = true
+parameters/looping = true
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.07
+anchor_bottom = 0.208
+offset_left = 279.0
+offset_top = 233.0
+offset_right = 806.36
+offset_bottom = 279.216
+icon = ExtResource("3_e1y2j")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
