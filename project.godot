@@ -10,15 +10,15 @@ config_version=5
 
 [application]
 
-config/name="bubble"
-run/main_scene="res://scene.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/name="Endless Greed, a bubble story"
+run/main_scene="res://start_scene.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
 
 [dotnet]
 
-project/assembly_name="bubble"
-
-[rendering]
-
-renderer/rendering_method="mobile"
+project/assembly_name="biancateste"
