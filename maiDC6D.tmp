@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvnio4nx5bdhq"]
+
+[ext_resource type="Texture2D" uid="uid://omok3pshrkyf" path="res://Game Jam - BG 1.png" id="1_qbgxy"]
+[ext_resource type="Texture2D" uid="uid://ct7jrbyccb002" path="res://Game Jam - BG 4.png" id="2_afla5"]
+[ext_resource type="Texture2D" uid="uid://b466xpqn13o2y" path="res://Game Jam - Bubbles.png" id="2_w67te"]
+[ext_resource type="Texture2D" uid="uid://c52uhl3f1toj2" path="res://spikes.png" id="3_7y3se"]
+[ext_resource type="Script" path="res://player.gd" id="3_d4jhn"]
+[ext_resource type="Script" path="res://area_2d.gd" id="3_snx51"]
+[ext_resource type="Script" path="res://control.gd" id="7_jqmwc"]
+[ext_resource type="Texture2D" uid="uid://bg4q1cfc6w7cp" path="res://mneu amigo mt bom.webp" id="8_yldlx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0o3v"]
+size = Vector2(1151, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cgtt"]
+size = Vector2(108, 165)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02dhi"]
+radius = 29.0
+
+[node name="MainScene" type="Node2D"]
+position = Vector2(-4, 4)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(583, 334)
+scale = Vector2(0.596094, 0.595833)
+texture = ExtResource("1_qbgxy")
+
+[node name="chao" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/chao"]
+position = Vector2(583.5, 330)
+scale = Vector2(0.598437, 0.594444)
+texture = ExtResource("2_afla5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/chao"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/chao/StaticBody2D"]
+position = Vector2(584.5, 604)
+shape = SubResource("RectangleShape2D_o0o3v")
+one_way_collision_margin = 0.0
+
+[node name="Area2D" type="Area2D" parent="ParallaxBackground"]
+script = ExtResource("3_snx51")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Area2D"]
+position = Vector2(495.5, 479)
+scale = Vector2(0.767606, 1)
+texture = ExtResource("3_7y3se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Area2D"]
+position = Vector2(493, 479.5)
+shape = SubResource("RectangleShape2D_1cgtt")
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+script = ExtResource("3_d4jhn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(146, 436)
+scale = Vector2(0.101667, 0.0799996)
+texture = ExtResource("2_w67te")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(146, 437)
+shape = SubResource("CircleShape2D_02dhi")
+one_way_collision_margin = 0.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_jqmwc")
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_yldlx")
+
+[node name="Label" type="Label" parent="Control2"]
+offset_left = 467.0
+offset_top = 212.0
+offset_right = 599.0
+offset_bottom = 239.0
+text = "acabou asdasdas"
+
+[node name="Button" type="Button" parent="Control2"]
+offset_left = 519.0
+offset_top = 256.0
+offset_right = 556.0
+offset_bottom = 277.0
+text = "Reset"
+
+[connection signal="body_entered" from="ParallaxBackground/Area2D" to="ParallaxBackground/Area2D" method="_on_body_entered"]
