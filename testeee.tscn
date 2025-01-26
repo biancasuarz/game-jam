@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://7d8t7wk6uh57"]
+
+[ext_resource type="Texture2D" uid="uid://bg4q1cfc6w7cp" path="res://mneu amigo mt bom.webp" id="1_7ibae"]
+[ext_resource type="Script" path="res://control.gd" id="1_yjb0q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yjb0q")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7ibae")
+
+[node name="Label" type="Label" parent="Control"]
+offset_left = 467.0
+offset_top = 212.0
+offset_right = 599.0
+offset_bottom = 239.0
+text = "acabou asdasdas"
+
+[node name="Button" type="Button" parent="Control"]
+offset_left = 519.0
+offset_top = 256.0
+offset_right = 556.0
+offset_bottom = 277.0
+text = "Reset"
