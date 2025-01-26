@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvnddb2ni8vv1"
+path="res://.godot/imported/01_Bubbles Pop 1.ogg-9487ed6b4c837b9108f5590c822ace1d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/01_Bubbles Pop 1.ogg"
+dest_files=["res://.godot/imported/01_Bubbles Pop 1.ogg-9487ed6b4c837b9108f5590c822ace1d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

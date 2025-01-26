@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cvnio4nx5bdhq"]
+[gd_scene load_steps=13 format=3 uid="uid://cvnio4nx5bdhq"]
 
-[ext_resource type="Texture2D" uid="uid://omok3pshrkyf" path="res://assets/Game Jam - BG 1.png" id="1_qbgxy"]
-[ext_resource type="Texture2D" uid="uid://ct7jrbyccb002" path="res://assets/Game Jam - BG 4.png" id="2_afla5"]
+[ext_resource type="Texture2D" uid="uid://omok3pshrkyf" path="res://Game Jam - BG 1.png" id="1_qbgxy"]
+[ext_resource type="Texture2D" uid="uid://ct7jrbyccb002" path="res://Game Jam - BG 4.png" id="2_afla5"]
 [ext_resource type="Texture2D" uid="uid://b466xpqn13o2y" path="res://Game Jam - Bubbles.png" id="2_w67te"]
-[ext_resource type="Texture2D" uid="uid://c52uhl3f1toj2" path="res://assets/spikes.png" id="3_7y3se"]
+[ext_resource type="Texture2D" uid="uid://c52uhl3f1toj2" path="res://spikes.png" id="3_7y3se"]
 [ext_resource type="Script" path="res://player.gd" id="3_d4jhn"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_snx51"]
 [ext_resource type="PackedScene" uid="uid://cbsh31yreggdm" path="res://game_over_scene.tscn" id="7_s6w00"]
-[ext_resource type="AudioStream" uid="uid://dcu08nyjda8hc" path="res://sounds/03_Bubbles Pop 3.ogg" id="8_3u4je"]
+[ext_resource type="AudioStream" uid="uid://dcu08nyjda8hc" path="res://03_Bubbles Pop 3.ogg" id="8_3u4je"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="9_pxfkf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0o3v"]
 size = Vector2(1151, 96)
@@ -52,8 +53,6 @@ position = Vector2(495.5, 479)
 scale = Vector2(0.767606, 1)
 texture = ExtResource("3_7y3se")
 
-[node name="colisao" type="AudioStreamPlayer2D" parent="ParallaxBackground/Area2D/Sprite2D"]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Area2D"]
 position = Vector2(493, 479.5)
 shape = SubResource("RectangleShape2D_1cgtt")
@@ -66,12 +65,6 @@ position = Vector2(146, 436)
 scale = Vector2(0.101667, 0.0799996)
 texture = ExtResource("2_w67te")
 
-[node name="jump" type="AudioStreamPlayer2D" parent="Player/Sprite2D"]
-position = Vector2(7.84302, 41.355)
-stream = ExtResource("8_3u4je")
-volume_db = -6.0
-autoplay = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(146, 437)
 shape = SubResource("CircleShape2D_02dhi")
@@ -79,6 +72,13 @@ one_way_collision_margin = 0.0
 
 [node name="ParallaxBackground2" parent="." instance=ExtResource("7_s6w00")]
 visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(452, 407)
+stream = ExtResource("8_3u4je")
+volume_db = -6.0
+autoplay = true
+script = ExtResource("9_pxfkf")
 
 [connection signal="body_entered" from="ParallaxBackground/Area2D" to="ParallaxBackground/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="ParallaxBackground/Area2D" to="Player" method="_on_area_2d_body_entered"]

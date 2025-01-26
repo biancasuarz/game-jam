@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c52uhl3f1toj2"
-path="res://.godot/imported/spikes.png-4a2427e7b6483a335646e762227cfd31.ctex"
+uid="uid://ct7jrbyccb002"
+path="res://.godot/imported/Game Jam - BG 4.png-4727d788940c136bce27b3adacf18576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spikes.png"
-dest_files=["res://.godot/imported/spikes.png-4a2427e7b6483a335646e762227cfd31.ctex"]
+source_file="res://assets/Game Jam - BG 4.png"
+dest_files=["res://.godot/imported/Game Jam - BG 4.png-4727d788940c136bce27b3adacf18576.ctex"]
 
 [params]
 

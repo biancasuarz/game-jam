@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7jrbyccb002"
-path="res://.godot/imported/Game Jam - BG 4.png-e684296890aa052a1ef6dc3e1cd0d5e5.ctex"
+uid="uid://omok3pshrkyf"
+path="res://.godot/imported/Game Jam - BG 1.png-ebd22e9f063f7cb0d2b6004f0cca8cdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Jam - BG 4.png"
-dest_files=["res://.godot/imported/Game Jam - BG 4.png-e684296890aa052a1ef6dc3e1cd0d5e5.ctex"]
+source_file="res://assets/Game Jam - BG 1.png"
+dest_files=["res://.godot/imported/Game Jam - BG 1.png-ebd22e9f063f7cb0d2b6004f0cca8cdd.ctex"]
 
 [params]
 
