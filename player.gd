@@ -23,3 +23,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):  # Verifica se o objeto que entrou é o personagem
+		game_over()
+
+# Função que lida com o fim do jogo
+func game_over():
+	print("Game Over!")

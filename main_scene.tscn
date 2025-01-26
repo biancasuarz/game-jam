@@ -67,3 +67,4 @@ shape = SubResource("CircleShape2D_02dhi")
 one_way_collision_margin = 0.0
 
 [connection signal="body_entered" from="ParallaxBackground/Area2D" to="ParallaxBackground/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="ParallaxBackground/Area2D" to="Player" method="_on_area_2d_body_entered"]
