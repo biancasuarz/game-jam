@@ -34,5 +34,4 @@ func game_over():
 	timer.timeout.connect(_on_timer_timeout)
 
 func _on_timer_timeout():
-	print("Game Over!")
 	get_tree().change_scene_to_file("res://game_over_scene.tscn")

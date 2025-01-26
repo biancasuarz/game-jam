@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c876lqa0k464r"]
+[gd_scene load_steps=6 format=3 uid="uid://c876lqa0k464r"]
 
 [ext_resource type="Texture2D" uid="uid://wo10b8aodvs2" path="res://assets/background.png" id="1_aeje3"]
 [ext_resource type="Script" path="res://start_scene.gd" id="1_b73dv"]
 [ext_resource type="AudioStream" uid="uid://dvlaga5jqfw40" path="res://sounds/01_Musica_tema_Bubble.ogg" id="2_qg7iq"]
 [ext_resource type="Texture2D" uid="uid://cvh8t3sgr476" path="res://assets/Game Jam - BOTAO JOGAR.png" id="3_e1y2j"]
+[ext_resource type="Texture2D" uid="uid://b5eoink6rn5ox" path="res://Game Jam - titulo.png" id="5_as1ar"]
 
 [node name="ParallaxBackground3" type="ParallaxBackground"]
 script = ExtResource("1_b73dv")
@@ -22,11 +23,16 @@ parameters/looping = true
 anchors_preset = -1
 anchor_right = 0.07
 anchor_bottom = 0.208
-offset_left = 279.0
-offset_top = 233.0
-offset_right = 806.36
-offset_bottom = 279.216
+offset_left = 265.0
+offset_top = 364.0
+offset_right = 792.36
+offset_bottom = 410.216
 icon = ExtResource("3_e1y2j")
 flat = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(560, 160)
+scale = Vector2(0.45, 0.509444)
+texture = ExtResource("5_as1ar")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
